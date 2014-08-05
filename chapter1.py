@@ -34,8 +34,19 @@ print(movies2[4][1][3])
 print(movies2)
 for each_item in movies2:
 	print(each_item)
-
+"""
 names = ['Michael', 'Terry']
 print(isinstance(names, list))
 num_names= len(names)
 print(isinstance(num_names, list))
+"""
+for each_item in movies2:
+	if(isinstance(each_item, list)):
+		for nested_item in each_item:
+			if(isinstance(nested_item, list)):
+				for deeper_item in nested_item:
+					print(deeper_item)
+			else:
+				print(nested_item)
+	else:
+		print(each_item)
