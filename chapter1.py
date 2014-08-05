@@ -50,3 +50,16 @@ for each_item in movies2:
 				print(nested_item)
 	else:
 		print(each_item)
+
+
+print("\n");
+
+
+def print_lol(the_list):
+	for each_item in the_list:
+		if isinstance(each_item, list):
+			print_lol(each_item)
+		else:
+			print(each_item)	
+
+print_lol(movies2)
