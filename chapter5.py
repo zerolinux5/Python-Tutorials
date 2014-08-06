@@ -74,4 +74,12 @@ print(clean)
 clean = [float(sanitize(t)) for t in ['2-22', '3:33', '4.44']]
 print(clean)
 
+james3 = sorted([sanitize(t) for t in james])
+julie3 = sorted([sanitize(t) for t in julie])
+mikey3 = sorted([sanitize(t) for t in mikey])
+sarah3 = sorted([sanitize(t) for t in sarah])
 
+print(james3)
+print(julie3)
+print(mikey3)
+print(sarah3)
