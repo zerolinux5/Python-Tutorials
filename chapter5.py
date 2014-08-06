@@ -32,4 +32,21 @@ def sanitize(times):
 	(mins, secs) = times.split(splitter)
 	return(mins + '.' + secs)
 
+james2 = []
+julie2 = []
+mikey2 = []
+sarah2 = []
 
+for each_item in james:
+	james2.append(sanitize(each_item))
+for each_item in julie:
+	julie2.append(sanitize(each_item))
+for each_item in mikey:
+	mikey2.append(sanitize(each_item))
+for each_item in sarah:
+	sarah2.append(sanitize(each_item))
+
+print(sorted(james2))
+print(sorted(julie2))
+print(sorted(mikey2))
+print(sorted(sarah2))
