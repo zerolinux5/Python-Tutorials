@@ -1,3 +1,5 @@
+import nester
+
 man = []
 other = []
 try:
@@ -41,9 +43,9 @@ except IOErrror as err:
 #combining both withs into one line
 try:
 	with open('man_data.txt', 'w') as man_file,open('other_data.txt', 'w') as other_file:
-		print(man, file=man_file)
-		print(other, file = other_file)
-except IOErrror as err:
+		nester.print_lol(man, True, 0, fh=man_file)
+		nester.print_lol(other, True, 0, fh=other_file)
+except IOError as err:
 	print('File error:' + str(err))
 
 
