@@ -15,3 +15,9 @@ print(james)
 print(julie)
 print(mikey)
 print(sarah)
+
+data = [6, 3, 1, 2, 4, 5]
+print(data)
+data2 = sorted(data)
+print(data)
+print(data2)
