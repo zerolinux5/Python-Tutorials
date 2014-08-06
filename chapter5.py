@@ -83,3 +83,27 @@ print(james3)
 print(julie3)
 print(mikey3)
 print(sarah3)
+
+
+james4 = []
+julie4 = []
+mikey4 = []
+sarah4 = []
+
+for each_t in james:
+	if each_t not in james4:
+		james4.append(each_t)
+for each_t in julie:
+	if each_t not in julie4:
+		julie4.append(each_t)
+for each_t in mikey:
+	if each_t not in mikey4:
+		mikey4.append(each_t)
+for each_t in sarah:
+	if each_t not in sarah4:
+		sarah4.append(each_t)
+print(james4[0:3])
+print(julie4[0:3])
+print(mikey4[0:3])
+print(sarah4[0:3])
+
