@@ -21,3 +21,15 @@ print(data)
 data2 = sorted(data)
 print(data)
 print(data2)
+
+def sanitize(times):
+	if '-' in times:
+		splitter = '-'
+	elif ':' in times:
+		splitter = ':'
+	else:
+		return(times)
+	(mins, secs) = times.split(splitter)
+	return(mins + '.' + secs)
+
+
