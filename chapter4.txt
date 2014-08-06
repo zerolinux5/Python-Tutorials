@@ -23,8 +23,27 @@ try:
 	print(man, file=man_file)
 	print(other, file=other_file)
 
-except IOError:
-	print('File error.')
+except IOError as err:
+	print('File error.' + str(err))
 finally:
 	man_file.close()
 	other_file.close()
+
+#Using standard with as block
+try:
+	with open('man_data.txt', 'w') as man_file:
+		print(man, file=man_file)
+	with open('other_data.txt', 'w') as other_file:
+		print(other, file = other_file)
+except IOErrror as err:
+	print('File error:' + str(err))
+
+#combining both withs into one line
+try:
+	with open('man_data.txt', 'w') as man_file,open('other_data.txt', 'w') as other_file:
+		print(man, file=man_file)
+		print(other, file = other_file)
+except IOErrror as err:
+	print('File error:' + str(err))
+
+
