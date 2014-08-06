@@ -107,3 +107,24 @@ print(julie4[0:3])
 print(mikey4[0:3])
 print(sarah4[0:3])
 
+
+def get_coach_data(filename):
+	try:
+		with open(filename) as f:
+			data = f.readline()
+		return(data.strip().split(','))
+	except IOError as ioerr:
+		print('File error: ' + str(ioerr))
+		return(None)
+james5 = get_coach_data('james.txt')
+julie5 = get_coach_data('julie.txt')
+mikey5 = get_coach_data('mikey.txt')
+sarah5 = get_coach_data('sarah.txt')
+
+def sss(list_in):
+	print(sorted(set([sanitize(t) for t in list_in]))[0:3])
+
+sss(james5)
+sss(julie5)
+sss(mikey5)
+sss(sarah5)
