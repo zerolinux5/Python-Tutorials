@@ -10,12 +10,22 @@ class Athlete():
 	def add_times(self, list_of_times):
 		self.times.extend(list_of_times)
 
+class AthleteList(list):
+	def __init__(self, a_name, a_dob=None, a_times=[]):
+		list.__init__([])
+		self.name = a_name
+		self.dob = a_dob
+		self.extend(a_times)
+	def top3(self):
+		return(sorted(set([sanitize(t) for t in self]))[0:3])
+
+
 def get_coach_data(filename):
 	try:
 		with open(filename) as f:
 			data = f.readline()
 		temp = data.strip().split(',')
-		return(Athlete(temp.pop(0), temp.pop(0), temp))
+		return(AthleteList(temp.pop(0), temp.pop(0), temp))
 	except IOError as ioerr:
 		print('File error: ' + str(ioerr))
 		return(None)
@@ -116,15 +126,6 @@ print(johnny)
 print(johnny.name)
 for attr in johnny:
 	print(johnny.name + " is a " + attr + ".")
-
-class AthleteList(list):
-	def __init__(self, a_name, a_dob=None, a_times=[]):
-		list.__init__([])
-		self.name = a_name
-		self.dob = a_dob
-		self.extend(a_times)
-	def top3(self):
-		return(sorted(set([sanitize(t) for t in self]))[0:3])
 
 vera = AthleteList('Vera Vi')
 vera.append('1.31')
