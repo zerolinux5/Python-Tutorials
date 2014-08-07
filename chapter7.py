@@ -1,5 +1,6 @@
 import pickle
 from athletelist import AthleteList
+import yate
 
 def get_coach_data(filename):
         try:
@@ -45,3 +46,19 @@ for each_athlete in data:
 data_copy = get_from_store()
 for each_athlete in data_copy:
 	print(data_copy[each_athlete].name + ' ' + data_copy[each_athlete].dob)
+
+print(yate.start_response())
+print(yate.start_response("text/plain"))
+print(yate.start_response("application/json"))
+print(yate.include_header("Welcome to my home on the web!"))
+print(yate.include_footer({'Home': '/index.html', 'Select': '/cgi-bin/select.py'}))
+print(yate.include_footer({}))
+print(yate.start_form("/cgi-bin/process-athlete.py"))
+print(yate.end_form())
+print(yate.end_form("Click to Confirm Your Order"))
+for fab in ['John', 'Paul', 'George', 'Ringo']:
+	print(yate.radio_button(fab, fab))
+print(yate.u_list(['Life of Brian', 'Holy Grail']))
+print(yate.header("Welcome to my home on the web"))
+print(yate.header("This isa sub-sub-sub-sub-heading", 5))
+print(yate.para("Was it worth the wait? We hope it was..."))
