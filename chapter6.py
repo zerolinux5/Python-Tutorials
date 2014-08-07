@@ -61,3 +61,21 @@ print(james['Name'] + "'s fastest times are: " + james['Times'])
 print(julie['Name'] + "'s fastest times are: " + julie['Times'])
 print(mikey['Name'] + "'s fastest times are: " + mikey['Times'])
 print(sarah['Name'] + "'s fastest times are: " + sarah['Times'])
+
+class Athlete:
+	def __init__(self, a_name, a_dob = None, a_times=[]):
+		self.name = a_name
+		self.dob = a_dob
+		self.times = a_times
+sarah = Athlete('Sarah Sweeney', '2002-6-17', ['2:58', '2.58', '1.56'])
+james = Athlete('James Jones')
+print(type(sarah))
+print(type(james))
+print(sarah)
+print(james)
+print(sarah.name)
+print(james.name)
+print(sarah.dob)
+print(james.dob)
+print(sarah.times)
+print(james.times)
