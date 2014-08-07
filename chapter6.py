@@ -54,4 +54,10 @@ print(sarah_data['Name'] + "'s fastest times are: " + str(sorted(set([sanitize(t
 """
 
 james = get_coach_data('james2.txt')
+julie = get_coach_data('julie2.txt')
+mikey =  get_coach_data('mikey2.txt')
+sarah =  get_coach_data('sarah2.txt')
 print(james['Name'] + "'s fastest times are: " + james['Times'])
+print(julie['Name'] + "'s fastest times are: " + julie['Times'])
+print(mikey['Name'] + "'s fastest times are: " + mikey['Times'])
+print(sarah['Name'] + "'s fastest times are: " + sarah['Times'])
