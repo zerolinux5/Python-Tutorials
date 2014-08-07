@@ -38,5 +38,11 @@ palin['Birthplace'] = "Broomhill, Sheffield, England"
 cleese['Birthplace'] = "Weston-super-Mare, North Somerset, England"
 
 print(palin)
-
 print(cleese)
+
+sarah = get_coach_data('sarah2.txt')
+sarah_data = {}
+sarah_data['Name'] = sarah.pop(0)
+sarah_data['DOB'] = sarah.pop(0)
+sarah_data['Times'] = sarah
+print(sarah_data['Name'] + "'s fastest times are: " + str(sorted(set([sanitize(t) for t in sarah_data['Times']]))[0:3]))
