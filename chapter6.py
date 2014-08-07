@@ -1,4 +1,4 @@
-class Athlete:
+class Athlete():
 	def __init__(self, a_name, a_dob = None, a_times=[]):
 		self.name = a_name
 		self.dob = a_dob
@@ -102,3 +102,18 @@ vera.add_time('1.31')
 print(vera.top3())
 vera.add_times(['2-22', "1-21", '2:22'])
 print(vera.top3())
+
+class NamedList(list):
+	def __init__(self, a_name):
+		list.__init__([])
+		self.name = a_name
+johnny = NamedList("John Paul Jones")
+print(type(johnny))
+print(dir(johnny))
+johnny.append("Bass Player")
+johnny.extend(['Composer', "Arranger", 'Musician'])
+print(johnny)
+print(johnny.name)
+for attr in johnny:
+	print(johnny.name + " is a " + attr + ".")
+
